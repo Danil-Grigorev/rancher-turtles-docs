@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://danil-grigorev.github.io/pr-preview/pr-1/blog</id>
+    <id>https://danil-grigorev.github.io/rancher-turtles-docs/pr-preview/pr-1/blog</id>
     <title>Rancher Turtles Blog</title>
     <updated>2023-08-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://danil-grigorev.github.io/pr-preview/pr-1/blog"/>
+    <link rel="alternate" href="https://danil-grigorev.github.io/rancher-turtles-docs/pr-preview/pr-1/blog"/>
     <subtitle>Rancher Turtles Blog</subtitle>
-    <icon>https://danil-grigorev.github.io/pr-preview/pr-1/img/favicon.ico</icon>
+    <icon>https://danil-grigorev.github.io/rancher-turtles-docs/pr-preview/pr-1/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>https://danil-grigorev.github.io/pr-preview/pr-1/blog/first-blog-post</id>
-        <link href="https://danil-grigorev.github.io/pr-preview/pr-1/blog/first-blog-post"/>
+        <id>https://danil-grigorev.github.io/rancher-turtles-docs/pr-preview/pr-1/blog/first-blog-post</id>
+        <link href="https://danil-grigorev.github.io/rancher-turtles-docs/pr-preview/pr-1/blog/first-blog-post"/>
         <updated>2023-08-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the documentation site for Rancher Turtles.]]></summary>
         <content type="html"><![CDATA[<p>Welcome to the documentation site for Rancher Turtles.</p>]]></content>
