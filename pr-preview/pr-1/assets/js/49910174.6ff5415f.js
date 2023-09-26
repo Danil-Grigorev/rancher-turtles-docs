@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmysite=self.webpackChunkmysite||[]).push([[247],{6798:e=>{e.exports=JSON.parse('{"permalink":"/rancher-turtles-docs/pr-preview/pr-1/blog/tags/rancher","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

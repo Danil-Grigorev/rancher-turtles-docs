@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmysite=self.webpackChunkmysite||[]).push([[600],{2925:e=>{e.exports=JSON.parse('[{"label":"capi","permalink":"/pr-preview/pr-1/blog/tags/capi","count":1},{"label":"rancher","permalink":"/pr-preview/pr-1/blog/tags/rancher","count":1}]')}}]);

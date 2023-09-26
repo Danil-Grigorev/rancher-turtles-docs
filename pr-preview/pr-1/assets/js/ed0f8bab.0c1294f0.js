@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmysite=self.webpackChunkmysite||[]).push([[254],{2558:e=>{e.exports=JSON.parse('{"label":"capi","permalink":"/pr-preview/pr-1/blog/tags/capi","allTagsPath":"/pr-preview/pr-1/blog/tags","count":1}')}}]);
