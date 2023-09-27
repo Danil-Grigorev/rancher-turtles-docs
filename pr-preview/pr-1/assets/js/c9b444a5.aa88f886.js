@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmysite=self.webpackChunkmysite||[]).push([[924],{1055:e=>{e.exports=JSON.parse('[{"label":"capi","permalink":"/rancher-turtles-docs/pr-preview/pr-1/blog/tags/capi","count":1},{"label":"rancher","permalink":"/rancher-turtles-docs/pr-preview/pr-1/blog/tags/rancher","count":1}]')}}]);
