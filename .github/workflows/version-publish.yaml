@@ -21,6 +21,8 @@ jobs:
         run: echo "TAG=${TAG#v}" >> $GITHUB_ENV
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Prepare tag for publishing
+        run: echo "TAG=${TAG#v}" >> $GITHUB_ENV
       - name: Create a new version
         run: yarn docusaurus docs:version ${{ env.TAG }}
       - uses: EndBug/add-and-commit@v9
