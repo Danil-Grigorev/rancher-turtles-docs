@@ -1,0 +1,28 @@
+name: Publish new docs version
+
+on:
+  push:
+    tags:
+    - '*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+env:
+  TAG: ${{ github.ref_name }}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build website
+        run: yarn docusaurus docs:version {{ env.TAG }}
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Add docs version {{ env.TAG }}'
+      - name: Push changes
+        uses: ad-m/github-push-action@0.6.0
+        with:
+          branch: main
