@@ -25,6 +25,9 @@ concurrency:
 defaults:
   run:
     shell: bash
+env:
+  URL: "https://danil-grigorev.github.io/"
+  BASE_URL: "rancher-turtles-docs"
 
 jobs:
   build:
