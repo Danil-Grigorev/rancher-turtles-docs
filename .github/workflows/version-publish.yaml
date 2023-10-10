@@ -23,12 +23,14 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Create a new version
         run: yarn docusaurus docs:version ${{ env.TAG }}
-      - uses: EndBug/add-and-commit@v9
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
         with:
-          message: 'Add docs version ${{ env.TAG }}'
-          push: false
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{secrets.GITHUB_TOKEN}}
+          title: 'Add docs version ${{ env.TAG }}'
+          body: |
+            Add docs version ${{ env.TAG }}
+
+            cc @rancher/highlander
+          branch-suffix: short-commit-hash
+          delete-branch: true
