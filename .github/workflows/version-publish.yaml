@@ -27,8 +27,5 @@ jobs:
         with:
           message: 'Add docs version ${{ env.TAG }}'
           push: false
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
