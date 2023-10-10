@@ -30,5 +30,16 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          branch: main
+          branch: version-${{ env.TAG }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          title: 'Add docs version ${{ env.TAG }}'
+          body: |
+            Add docs version ${{ env.TAG }}
+
+            cc @rancher/highlander
+          base: version-${{ env.TAG }}
+          delete-branch: true
