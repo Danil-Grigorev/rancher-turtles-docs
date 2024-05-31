@@ -31,6 +31,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Add docs version ${{ env.TAG }}"
-          git push
+          git push origin HEAD:release-
           gh pr create --title 'turtles-docs release for turtles ${{ env.TAG }}' \
             --body 'Update docs version ${{ env.TAG }}\n\nChangelog: https://github.com/rancher/turtles/releases/tag/v${{ env.TAG }}\n\ncc @rancher/highlander'
