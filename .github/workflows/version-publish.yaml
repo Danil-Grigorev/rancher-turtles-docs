@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: refs/tags/${{ env.TAG }}
       - name: Prepare the tag
         run: echo "TAG=${TAG#v}" >> $GITHUB_ENV
       - name: Install dependencies
@@ -30,7 +32,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
-          git commit -m "Add docs version ${{ env.TAG }}"
-          git remote add upstream https://github.com/rancher/turtles-docs.git
-          git fetch upstream
-          git push upstream main
+          git commit -m "Add docs version v${{ env.TAG }}"
+          git push origin HEAD:refs/heads/release-v${{ env.TAG }}
+          gh pr create --title 'turtles-docs release for turtles v${{ env.TAG }}' \
+            --body 'Update docs version v${{ env.TAG }}\n\nChangelog: https://github.com/rancher/turtles/releases/tag/v${{ env.TAG }}\n\ncc @rancher/highlander'
